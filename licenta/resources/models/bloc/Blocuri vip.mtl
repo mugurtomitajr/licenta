@@ -1,0 +1,629 @@
+# FILE:Blocuri vip.obj
+newmtl GDLM1_SHADOW_MATERIAL
+Ka 0.228885 0.228885 0.228885
+Kd 0.228885 0.228885 0.228885
+Ks 0 0 0
+illum 2
+Ns 0
+newmtl equitone_roz
+Ka 0.845686 0.827059 0.786078
+Kd 0.311569 0.304706 0.289608
+Ks 0.923922 0.923922 0.923922
+illum 2
+Ns 30
+map_Ka Blocuri vip_Textures\PU_943_Brown.jpg
+map_Kd Blocuri vip_Textures\PU_943_Brown.jpg
+map_Ks Blocuri vip_Textures\PU_943_Brown.jpg
+newmtl equitone_linea_gri
+Ka 0.845686 0.827059 0.786078
+Kd 0.311569 0.304706 0.289608
+Ks 0.923922 0.923922 0.923922
+illum 2
+Ns 30
+map_Ka Blocuri vip_Textures\LT_20.jpg
+map_Kd Blocuri vip_Textures\LT_20.jpg
+map_Ks Blocuri vip_Textures\LT_20.jpg
+newmtl equitone_simplu_beige_inchis
+Ka 0.845686 0.827059 0.786078
+Kd 0.311569 0.304706 0.289608
+Ks 0.923922 0.923922 0.923922
+illum 2
+Ns 30
+map_Ka Blocuri vip_Textures\PU_943_Brown.jpg
+map_Kd Blocuri vip_Textures\PU_943_Brown.jpg
+map_Ks Blocuri vip_Textures\PU_943_Brown.jpg
+newmtl Paint_-_Light_Gray
+Ka 0.612706 0.612706 0.612706
+Kd 0.270118 0.270118 0.270118
+Ks 0.0990005 0.0990005 0.1
+illum 2
+Ns 0.72
+newmtl equitone_simplu_alb
+Ka 0.845686 0.827059 0.786078
+Kd 0.311569 0.304706 0.289608
+Ks 0.923922 0.923922 0.923922
+illum 2
+Ns 30
+map_Ka Blocuri vip_Textures\PU_141_White.jpg
+map_Kd Blocuri vip_Textures\PU_141_White.jpg
+map_Ks Blocuri vip_Textures\PU_141_White.jpg
+newmtl Brick_-_Red
+Ka 0.513333 0.329412 0.304706
+Kd 0.513333 0.329412 0.304706
+Ks 0 0 0
+illum 2
+Ns 0
+map_Ka Blocuri vip_Textures\Brick - Red -opt.jpg
+map_Kd Blocuri vip_Textures\Brick - Red -opt.jpg
+map_Ks Blocuri vip_Textures\Brick - Red -opt.jpg
+newmtl Floorboards_-_01
+Ka 0.299529 0.239098 0.204941
+Kd 0.277176 0.221255 0.189647
+Ks 0.152 0.152 0.152
+illum 2
+Ns 0
+map_Ka Blocuri vip_Textures\Floorboards - 01 -opt.jpg
+map_Kd Blocuri vip_Textures\Floorboards - 01 -opt.jpg
+map_Ks Blocuri vip_Textures\Floorboards - 01 -opt.jpg
+newmtl Stucco_-_White_Rough
+Ka 0.75 0.75 0.75
+Kd 0.95 0.95 0.95
+Ks 0.0793725 0.0774902 0.0759216
+illum 2
+Ns 0
+map_Ka Blocuri vip_Textures\Stucco - White Rough cb -opt.jpg
+map_Kd Blocuri vip_Textures\Stucco - White Rough cb -opt.jpg
+map_Ks Blocuri vip_Textures\Stucco - White Rough cb -opt.jpg
+newmtl Equitone_Linea_LT20
+Ka 0.382353 0.382353 0.376471
+Kd 0.484314 0.484314 0.476863
+Ks 0.0793725 0.0774902 0.0759216
+illum 2
+Ns 0
+map_Ka Blocuri vip_Textures\LT_20.jpg
+map_Kd Blocuri vip_Textures\LT_20.jpg
+map_Ks Blocuri vip_Textures\LT_20.jpg
+newmtl Wood_-_Pine_Grained_Horizontal
+Ka 0.572784 0.530745 0.454549
+Kd 0.530039 0.491137 0.420627
+Ks 0.152 0.152 0.152
+illum 2
+Ns 0
+map_Ka Blocuri vip_Textures\Wood - Pine Grained Horizontal -opt.jpg
+map_Kd Blocuri vip_Textures\Wood - Pine Grained Horizontal -opt.jpg
+map_Ks Blocuri vip_Textures\Wood - Pine Grained Horizontal -opt.jpg
+newmtl Light_Green_Epoxy_(NCS_S_3010-G30Y)_[ForaForm]
+Ka 0.540784 0.614902 0.494118
+Kd 0.741647 0.843294 0.677647
+Ks 1 1 1
+illum 2
+Ns 18
+newmtl Brick_-_White_Natural
+Ka 0.669804 0.669804 0.669804
+Kd 0.669804 0.669804 0.669804
+Ks 0 0 0
+illum 2
+Ns 0
+map_Ka Blocuri vip_Textures\Brick - White Natural -opt.jpg
+map_Kd Blocuri vip_Textures\Brick - White Natural -opt.jpg
+map_Ks Blocuri vip_Textures\Brick - White Natural -opt.jpg
+newmtl Equitone_Pictura_PU141_White
+Ka 0.705882 0.711765 0.7
+Kd 0.894118 0.901569 0.886667
+Ks 0.0793725 0.0774902 0.0759216
+illum 2
+Ns 0
+map_Ka Blocuri vip_Textures\PU_141_White.jpg
+map_Kd Blocuri vip_Textures\PU_141_White.jpg
+map_Ks Blocuri vip_Textures\PU_141_White.jpg
+newmtl Paint_-_Glossy_White
+Ka 0.88 0.88 0.88
+Kd 0.3 0.3 0.3
+Ks 0.683104 0.683104 0.69
+illum 2
+Ns 38.56
+newmtl Equitone_Eter_TE_40
+Ka 0.382353 0.247059 0.208824
+Kd 0.484314 0.312941 0.26451
+Ks 0.0793725 0.0774902 0.0759216
+illum 2
+Ns 0
+map_Ka Blocuri vip_Textures\TE_40.jpg
+map_Kd Blocuri vip_Textures\TE_40.jpg
+map_Ks Blocuri vip_Textures\TE_40.jpg
+newmtl Paint_-_Pale_Jade
+Ka 0.459529 0.656471 0.601765
+Kd 0.202588 0.289412 0.265294
+Ks 0.0990005 0.0990005 0.1
+illum 2
+Ns 0.72
+newmtl Wood_-_Walnut_Vertical
+Ka 0.225961 0.173412 0.136627
+Kd 0.209098 0.160471 0.126431
+Ks 0.152 0.152 0.152
+illum 2
+Ns 0
+map_Ka Blocuri vip_Textures\Wood - Walnut Vertical -opt.jpg
+map_Kd Blocuri vip_Textures\Wood - Walnut Vertical -opt.jpg
+map_Ks Blocuri vip_Textures\Wood - Walnut Vertical -opt.jpg
+newmtl Metal_-_Zinc
+Ka 0.365257 0.369906 0.373607
+Kd 0.418385 0.423711 0.42795
+Ks 0.418353 0.418353 0.418353
+illum 2
+Ns 11
+map_Ka Blocuri vip_Textures\Metal - Zinc -opt.jpg
+map_Kd Blocuri vip_Textures\Metal - Zinc -opt.jpg
+map_Ks Blocuri vip_Textures\Metal - Zinc -opt.jpg
+newmtl equitone_simplu_gri_inchis
+Ka 0.845686 0.827059 0.786078
+Kd 0.311569 0.304706 0.289608
+Ks 0.923922 0.923922 0.923922
+illum 2
+Ns 30
+map_Ka Blocuri vip_Textures\PU_241_Grey.jpg
+map_Kd Blocuri vip_Textures\PU_241_Grey.jpg
+map_Ks Blocuri vip_Textures\PU_241_Grey.jpg
+newmtl equitone_linea_roz_orizontal
+Ka 0.845686 0.827059 0.786078
+Kd 0.311569 0.304706 0.289608
+Ks 0.923922 0.923922 0.923922
+illum 2
+Ns 30
+map_Ka Blocuri vip_Textures\LT_60.jpg
+map_Kd Blocuri vip_Textures\LT_60.jpg
+map_Ks Blocuri vip_Textures\LT_60.jpg
+newmtl Wood_-_Mahogany_Horizontal
+Ka 0.399373 0.191804 0.141882
+Kd 0.369569 0.17749 0.131294
+Ks 0.152 0.152 0.152
+illum 2
+Ns 0
+map_Ka Blocuri vip_Textures\Wood - Mahogany Horizontal -opt.jpg
+map_Kd Blocuri vip_Textures\Wood - Mahogany Horizontal -opt.jpg
+map_Ks Blocuri vip_Textures\Wood - Mahogany Horizontal -opt.jpg
+newmtl Fine_Upholstery_Light_Green_[ForaForm]
+Ka 0.489412 0.602588 0.321176
+Kd 0.564706 0.695294 0.370588
+Ks 0 0 0
+illum 2
+Ns 1
+map_Ka Blocuri vip_Textures\FF_FU_LightGreen_872.jpg
+map_Kd Blocuri vip_Textures\FF_FU_LightGreen_872.jpg
+map_Ks Blocuri vip_Textures\FF_FU_LightGreen_872.jpg
+newmtl Metal_-_Bronze
+Ka 0.347294 0.218118 0.0910588
+Kd 0.257255 0.161569 0.067451
+Ks 0.756667 0.566667 0.353333
+illum 2
+Ns 9.8
+newmtl Paint_-_Dark_Gray
+Ka 0.331882 0.331882 0.331882
+Kd 0.146314 0.146314 0.146314
+Ks 0.0990005 0.0990005 0.1
+illum 2
+Ns 0.72
+newmtl Concrete_-_04
+Ka 0.322824 0.324745 0.303608
+Kd 0.474353 0.477176 0.446118
+Ks 0.356948 0.3491 0.306226
+illum 2
+Ns 0
+map_Ka Blocuri vip_Textures\Concrete - 04 cb -opt.jpg
+map_Kd Blocuri vip_Textures\Concrete - 04 cb -opt.jpg
+map_Ks Blocuri vip_Textures\Concrete - 04 cb -opt.jpg
+newmtl Tiles_-_Light_Brown_15x15
+Ka 0.61098 0.546667 0.524157
+Kd 0.365098 0.326667 0.313216
+Ks 0.27 0.27 0.27
+illum 2
+Ns 2.6
+map_Ka Blocuri vip_Textures\Tiles - Light Brown 15x15 -opt.jpg
+map_Kd Blocuri vip_Textures\Tiles - Light Brown 15x15 -opt.jpg
+map_Ks Blocuri vip_Textures\Tiles - Light Brown 15x15 -opt.jpg
+newmtl Paint_-_Golden_Beige
+Ka 0.682 0.565294 0.412118
+Kd 0.300667 0.249216 0.181686
+Ks 0.0990005 0.0990005 0.1
+illum 2
+Ns 0.72
+newmtl Brick_-_Running_Bond
+Ka 0.494118 0.370588 0.329412
+Kd 0.494118 0.370588 0.329412
+Ks 0 0 0
+illum 2
+Ns 0
+map_Ka Blocuri vip_Textures\Brick - Running Bond -opt.jpg
+map_Kd Blocuri vip_Textures\Brick - Running Bond -opt.jpg
+map_Ks Blocuri vip_Textures\Brick - Running Bond -opt.jpg
+newmtl Earth_-_Brown
+Ka 0.371451 0.26102 0.188235
+Kd 0.580392 0.407843 0.294118
+Ks 0 0 0
+illum 2
+Ns 0
+map_Ka Blocuri vip_Textures\Earth - Brown -opt.jpg
+map_Kd Blocuri vip_Textures\Earth - Brown -opt.jpg
+map_Ks Blocuri vip_Textures\Earth - Brown -opt.jpg
+newmtl Brick_-_Aged_Natural
+Ka 0.516078 0.422745 0.376078
+Kd 0.516078 0.422745 0.376078
+Ks 0 0 0
+illum 2
+Ns 0
+map_Ka Blocuri vip_Textures\Brick - Aged Natural -opt.jpg
+map_Kd Blocuri vip_Textures\Brick - Aged Natural -opt.jpg
+map_Ks Blocuri vip_Textures\Brick - Aged Natural -opt.jpg
+newmtl Dark_Grey_(NCS_S_7500-N)_[ForaForm]
+Ka 0.230588 0.230588 0.225098
+Kd 0.316235 0.316235 0.308706
+Ks 0.329412 0.329412 0.321569
+illum 2
+Ns 18
+newmtl Metal_-_Nickel
+Ka 0.557255 0.538039 0.494118
+Kd 0.398039 0.384314 0.352941
+Ks 0.651176 0.625765 0.571765
+illum 2
+Ns 5.2
+newmtl Metallic_Epoxy_[ForaForm]
+Ka 0.847059 0.847059 0.847059
+Kd 0.542118 0.542118 0.542118
+Ks 1 1 1
+illum 2
+Ns 100
+newmtl Paint_-_Sand_Beige
+Ka 0.769529 0.725765 0.623647
+Kd 0.339255 0.319961 0.274941
+Ks 0.0990005 0.0990005 0.1
+illum 2
+Ns 0.72
+newmtl Paint_-_Golden_Ochre
+Ka 0.744 0.510588 0.182353
+Kd 0.328 0.225098 0.0803922
+Ks 0.0990005 0.0990005 0.1
+illum 2
+Ns 0.72
+newmtl Tiles_-_White_Matte_15x15
+Ka 0.7 0.7 0.7
+Kd 0.7 0.7 0.7
+Ks 0 0 0
+illum 2
+Ns 0
+map_Ka Blocuri vip_Textures\Tiles - White Matte 15x15 -opt.jpg
+map_Kd Blocuri vip_Textures\Tiles - White Matte 15x15 -opt.jpg
+map_Ks Blocuri vip_Textures\Tiles - White Matte 15x15 -opt.jpg
+newmtl Black_Epoxy_(RAL9005)_[ForaForm]
+Ka 0 0 0
+Kd 0 0 0
+Ks 0.923922 0.923922 0.923922
+illum 2
+Ns 30
+newmtl Honduras_Stain_[ForaForm]
+Ka 0.430902 0.194431 0.105098
+Kd 0.546667 0.246667 0.133333
+Ks 0.098558 0.0778874 0.0677295
+illum 2
+Ns 5
+map_Ka Blocuri vip_Textures\FF_W_Honduras_stain.jpg
+map_Kd Blocuri vip_Textures\FF_W_Honduras_stain.jpg
+map_Ks Blocuri vip_Textures\FF_W_Honduras_stain.jpg
+newmtl Wood_-_Pine_Grained_Vertical
+Ka 0.572784 0.530745 0.454549
+Kd 0.530039 0.491137 0.420627
+Ks 0.152 0.152 0.152
+illum 2
+Ns 0
+map_Ka Blocuri vip_Textures\Wood - Pine Grained Vertical -opt.jpg
+map_Kd Blocuri vip_Textures\Wood - Pine Grained Vertical -opt.jpg
+map_Ks Blocuri vip_Textures\Wood - Pine Grained Vertical -opt.jpg
+newmtl Metal_-_Iron
+Ka 0.243016 0.252075 0.271919
+Kd 0.198562 0.205964 0.222178
+Ks 0.24902 0.24902 0.24902
+illum 2
+Ns 0
+map_Ka Blocuri vip_Textures\Metal - Iron -opt.jpg
+map_Kd Blocuri vip_Textures\Metal - Iron -opt.jpg
+map_Ks Blocuri vip_Textures\Metal - Iron -opt.jpg
+newmtl Floorboards_-_03
+Ka 0.578039 0.538627 0.483451
+Kd 0.534902 0.498431 0.447373
+Ks 0.152 0.152 0.152
+illum 2
+Ns 0
+map_Ka Blocuri vip_Textures\Floorboards - 03 -opt.jpg
+map_Kd Blocuri vip_Textures\Floorboards - 03 -opt.jpg
+map_Ks Blocuri vip_Textures\Floorboards - 03 -opt.jpg
+newmtl Stucco_-_White_Fine
+Ka 0.66 0.66 0.66
+Kd 0.95 0.95 0.95
+Ks 0.01 0.01 0.01
+illum 2
+Ns 0.16
+map_Ka Blocuri vip_Textures\Stucco - White Fine c -opt.jpg
+map_Kd Blocuri vip_Textures\Stucco - White Fine c -opt.jpg
+map_Ks Blocuri vip_Textures\Stucco - White Fine c -opt.jpg
+newmtl Stone_-_Marble_Pink
+Ka 0.647843 0.606667 0.623137
+Kd 0.647843 0.606667 0.623137
+Ks 0.08 0.08 0.08
+illum 2
+Ns 0
+map_Ka Blocuri vip_Textures\Stone - Marble Pink -opt.jpg
+map_Kd Blocuri vip_Textures\Stone - Marble Pink -opt.jpg
+map_Ks Blocuri vip_Textures\Stone - Marble Pink -opt.jpg
+newmtl Stucco_-_Red_Rough
+Ka 0.605882 0.335294 0.305882
+Kd 0.622039 0.344235 0.314039
+Ks 0.12898 0.125922 0.123373
+illum 2
+Ns 0.84
+map_Ka Blocuri vip_Textures\Stucco - Red Rough c -opt.jpg
+map_Kd Blocuri vip_Textures\Stucco - Red Rough c -opt.jpg
+map_Ks Blocuri vip_Textures\Stucco - Red Rough c -opt.jpg
+newmtl Water_-_Pond
+Ka 0.337255 0.654902 0.478431
+Kd 0.212471 0.412588 0.301412
+Ks 0.663529 0.525176 0.338824
+illum 2
+Ns 0.64
+map_Ka Blocuri vip_Textures\Water - Pond -opt.jpg
+map_Kd Blocuri vip_Textures\Water - Pond -opt.jpg
+map_Ks Blocuri vip_Textures\Water - Pond -opt.jpg
+newmtl Paint_-_Celadon
+Ka 0.609059 0.722118 0.605412
+Kd 0.26851 0.318353 0.266902
+Ks 0.0990005 0.0990005 0.1
+illum 2
+Ns 0.72
+newmtl _______(from_Converted_Object)
+Ka 0.410392 0.410392 0.410392
+Kd 0.505098 0.505098 0.505098
+Ks 0.183529 0.183529 0.183529
+illum 2
+Ns 64
+newmtl Stucco_-_Yellow_Rough
+Ka 0.75 0.614706 0.367647
+Kd 0.95 0.778627 0.465686
+Ks 0.0793725 0.0774902 0.0759216
+illum 2
+Ns 0
+map_Ka Blocuri vip_Textures\Stucco - Yellow Rough cb -opt.jpg
+map_Kd Blocuri vip_Textures\Stucco - Yellow Rough cb -opt.jpg
+map_Ks Blocuri vip_Textures\Stucco - Yellow Rough cb -opt.jpg
+newmtl Paint_-_Royal_Blue
+Ka 0.0765882 0.31 0.853412
+Kd 0.0337647 0.136667 0.376235
+Ks 0.0990005 0.0990005 0.1
+illum 2
+Ns 0.72
+newmtl Metal_-_Copper_New
+Ka 0.757647 0.487529 0.405176
+Kd 0.396863 0.255373 0.212235
+Ks 0.654235 0.585922 0.352078
+illum 2
+Ns 8.2
+newmtl Paint_-_Titanium_White
+Ka 0.93 0.93 0.93
+Kd 0.41 0.41 0.41
+Ks 0.0990005 0.0990005 0.1
+illum 2
+Ns 0.72
+newmtl PEN_MATERIAL91
+Ka 0.614115 0.614115 0.844892
+Kd 0.614115 0.614115 0.844892
+Ks 0 0 0
+illum 2
+Ns 0
+newmtl GDLM54_PEN_MATERIAL0
+Ka 0.844892 0.844892 0.844892
+Kd 0.844892 0.844892 0.844892
+Ks 0 0 0
+illum 2
+Ns 0
+newmtl PEN_MATERIAL87
+Ka 0.44036 0.44036 0.44036
+Kd 0.44036 0.44036 0.44036
+Ks 0 0 0
+illum 2
+Ns 0
+newmtl PEN_MATERIAL41
+Ka 0.15259 0.15259 0.15259
+Kd 0.15259 0.15259 0.15259
+Ks 0 0 0
+illum 2
+Ns 0
+newmtl PEN_MATERIAL89
+Ka 0.459373 0.711864 0.668421
+Kd 0.459373 0.711864 0.668421
+Ks 0 0 0
+illum 2
+Ns 0
+newmtl Glass_-_Clear_Fast
+Ka 0.64 0.658667 0.648
+Kd 0.564706 0.581176 0.571765
+Ks 1 1 1
+illum 2
+d 0.31
+Ns 79.52
+newmtl Wood_-_Oak_Light
+Ka 0.536 0.499216 0.451922
+Kd 0.496 0.461961 0.418196
+Ks 0.152 0.152 0.152
+illum 2
+Ns 0
+map_Ka Blocuri vip_Textures\Wood - Oak Light -opt.jpg
+map_Kd Blocuri vip_Textures\Wood - Oak Light -opt.jpg
+map_Ks Blocuri vip_Textures\Wood - Oak Light -opt.jpg
+newmtl Metal_-_Stainless_Steel
+Ka 0.532353 0.535294 0.567647
+Kd 0.390392 0.392549 0.416275
+Ks 0.82349 0.803961 0.787686
+illum 2
+Ns 13
+map_Ka Blocuri vip_Textures\Metal - Stainless Steel -opt.jpg
+map_Kd Blocuri vip_Textures\Metal - Stainless Steel -opt.jpg
+map_Ks Blocuri vip_Textures\Metal - Stainless Steel -opt.jpg
+newmtl Ceramic_-_Porcelain
+Ka 0.571355 0.585048 0.59
+Kd 0.629459 0.644545 0.65
+Ks 0.2 0.2 0.2
+illum 2
+Ns 9
+newmtl Plastic_-_Laminate
+Ka 0.703529 0.605647 0.507765
+Kd 0.559216 0.481412 0.403608
+Ks 0.241176 0.241176 0.241176
+illum 2
+Ns 4.2
+newmtl Fine_Upholstery_Olive_[ForaForm]
+Ka 0.290588 0.321176 0.131529
+Kd 0.335294 0.370588 0.151765
+Ks 0 0 0
+illum 2
+Ns 1
+map_Ka Blocuri vip_Textures\FF_FU_Olive.jpg
+map_Kd Blocuri vip_Textures\FF_FU_Olive.jpg
+map_Ks Blocuri vip_Textures\FF_FU_Olive.jpg
+newmtl Textile_-_01
+Ka 0.660706 0.633176 0.608706
+Kd 0.762353 0.730588 0.702353
+Ks 0 0 0
+illum 2
+Ns 0
+map_Ka Blocuri vip_Textures\Textile - 01 cb -opt.jpg
+map_Kd Blocuri vip_Textures\Textile - 01 cb -opt.jpg
+map_Ks Blocuri vip_Textures\Textile - 01 cb -opt.jpg
+newmtl Metal_-_Chrome_01
+Ka 0.486863 0.486863 0.486863
+Kd 0.224706 0.224706 0.224706
+Ks 0.96 0.96 0.96
+illum 2
+Ns 53.92
+newmtl Paint_-_Cadmium_Yellow
+Ka 0.919059 0.915412 0
+Kd 0.405176 0.403569 0
+Ks 0.0990005 0.0990005 0.1
+illum 2
+Ns 0.72
+newmtl Paint_-_Ivory_Black
+Ka 0 0 0
+Kd 0 0 0
+Ks 0.356402 0.356402 0.36
+illum 2
+Ns 0.72
+newmtl Stone_-_Granite_Red
+Ka 0.310039 0.131373 0.131373
+Kd 0.286902 0.121569 0.121569
+Ks 0.152 0.152 0.152
+illum 2
+Ns 0
+map_Ka Blocuri vip_Textures\Stone - Granite Red -opt.jpg
+map_Kd Blocuri vip_Textures\Stone - Granite Red -opt.jpg
+map_Ks Blocuri vip_Textures\Stone - Granite Red -opt.jpg
+newmtl PEN_MATERIAL4
+Ka 0.158007 0.581537 0.242176
+Kd 0.158007 0.581537 0.242176
+Ks 0 0 0
+illum 2
+Ns 0
+newmtl Concrete_-_10
+Ka 0.244706 0.244706 0.244706
+Kd 0.376471 0.376471 0.376471
+Ks 0.12451 0.12451 0.12451
+illum 2
+Ns 1
+map_Ka Blocuri vip_Textures\Concrete - 10 c -opt.jpg
+map_Kd Blocuri vip_Textures\Concrete - 10 c -opt.jpg
+map_Ks Blocuri vip_Textures\Concrete - 10 c -opt.jpg
+newmtl Roof_Tiles_-_French_Red
+Ka 0.570157 0.283765 0.233843
+Kd 0.527608 0.262588 0.216392
+Ks 0.152 0.152 0.152
+illum 2
+Ns 0
+map_Ka Blocuri vip_Textures\Roof Tiles - French Red -opt.jpg
+map_Kd Blocuri vip_Textures\Roof Tiles - French Red -opt.jpg
+map_Ks Blocuri vip_Textures\Roof Tiles - French Red -opt.jpg
+newmtl Metal_-_Aluminium
+Ka 0.71586 0.687236 0.687236
+Kd 0.128488 0.12335 0.12335
+Ks 0.544738 0.544738 0.544738
+illum 2
+Ns 10.2
+newmtl Stone_-_Marble_Carrara_White
+Ka 0.774902 0.774902 0.774902
+Kd 0.726471 0.726471 0.726471
+Ks 0.08 0.08 0.08
+illum 2
+Ns 0
+map_Ka Blocuri vip_Textures\Stone - Marble Carrara White -opt.jpg
+map_Kd Blocuri vip_Textures\Stone - Marble Carrara White -opt.jpg
+map_Ks Blocuri vip_Textures\Stone - Marble Carrara White -opt.jpg
+newmtl GDLM74_oak_mat
+Ka 0.697199 0.543222 0.327694
+Kd 0.498 0.388016 0.234067
+Ks 0.746304 0.597757 0.37837
+illum 2
+Ns 15
+map_Ka Blocuri vip_Textures\oak.jpg
+map_Kd Blocuri vip_Textures\oak.jpg
+map_Ks Blocuri vip_Textures\oak.jpg
+newmtl GDLM75_cherry_stain
+Ka 0.403553 0.110947 0.0524468
+Kd 0.424793 0.116786 0.0552071
+Ks 0.582238 0.472007 0.39477
+illum 2
+Ns 21
+map_Ka Blocuri vip_Textures\cherry_stain.jpg
+map_Kd Blocuri vip_Textures\cherry_stain.jpg
+map_Ks Blocuri vip_Textures\cherry_stain.jpg
+newmtl Wood_-_Mahogany_Vertical
+Ka 0.399373 0.191804 0.141882
+Kd 0.369569 0.17749 0.131294
+Ks 0.152 0.152 0.152
+illum 2
+Ns 0
+map_Ka Blocuri vip_Textures\Wood - Mahogany Vertical -opt.jpg
+map_Kd Blocuri vip_Textures\Wood - Mahogany Vertical -opt.jpg
+map_Ks Blocuri vip_Textures\Wood - Mahogany Vertical -opt.jpg
+newmtl Leather_-_Tabac
+Ka 0.284798 0.11335 0.0423066
+Kd 0.289884 0.115374 0.043062
+Ks 0.542196 0.454667 0.413333
+illum 2
+Ns 4.6
+map_Ka Blocuri vip_Textures\Leather - Tabac rb -opt.jpg
+map_Kd Blocuri vip_Textures\Leather - Tabac rb -opt.jpg
+map_Ks Blocuri vip_Textures\Leather - Tabac rb -opt.jpg
+newmtl GDLM78_builtInMatBlackPlasti
+Ka 0.05 0.0470588 0.0441176
+Kd 0.05 0.0470588 0.0441176
+Ks 0.352941 0.352941 0.352941
+illum 2
+Ns 5
+newmtl Paint_-_Peach
+Ka 0.926353 0.656471 0.492353
+Kd 0.408392 0.289412 0.217059
+Ks 0.0990005 0.0990005 0.1
+illum 2
+Ns 0.72
+newmtl Paint_-_Cadmium_Orange
+Ka 0.860706 0.288118 0.0692941
+Kd 0.379451 0.12702 0.030549
+Ks 0.0990005 0.0990005 0.1
+illum 2
+Ns 0.72
+newmtl GDLM81_builtInMatBlackTyre
+Ka 0.0860066 0.0860066 0.0860066
+Kd 0.0810062 0.0810062 0.0810062
+Ks 0.0891005 0.0891005 0.09
+illum 2
+Ns 2.2
+newmtl GDLM82_builtInMatButtonsBlac
+Ka 0.05 0.0470588 0.0441176
+Kd 0.05 0.0470588 0.0441176
+Ks 0.219608 0.219608 0.219608
+illum 2
+Ns 15.46
