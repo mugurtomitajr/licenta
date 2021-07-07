@@ -1,0 +1,66 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam defaultFontName helvetica
+skinparam monochrome true
+skinparam roundCorner 10
+skinparam minClassWidth 320
+
+class AssetManager {
+- _models : vector<Model*>
+- _modelsId : map<string, Model*>
+..
+- _textures : vector<Texture*>
+- _texturesId : map<string, Texture*>
+..
+- _meshes : vector<Mesh*>
+- _meshesId : map<string, Mesh*>
+..
+- _lightingMaterials : vector<LightingMaterial*>
+- _lightingMaterialsId : map<string, LightingMaterial*>
+..
+- _shaders : vector<Shader*>
+- _shadersId : map<string, Shader*>
+--
++ AssetManager ()
++ ~AssetManager ()
+..
++ AddTexture (const char *) : Texture *
++ AddTexture (const char *, const char *) : Texture *
++ GetTexture (const char *) : Texture *
+..
++ AddLightingMaterial (GLfloat, GLfloat) : LightingMaterial *
++ AddLightingMaterial (const char *, GLfloat, GLfloat) : LightingMaterial *
++ GetLightingMaterial (const char *) : LightingMaterial *
+..
++ AddMesh (GLfloat *, unsigned int, unsigned int *, unsigned int, const char *, const char *, const char *) : Mesh *
++ AddMesh (const char *, GLfloat *, unsigned int, unsigned int *, unsigned int, const char *, const char *, const char *) : Mesh *
++ GetMesh (const char *) : Mesh *
++ DeleteMesh (const char *) : void
++ DeleteMesh (Mesh *) : void
+..
++ AddModel (const char *, vec3, vec3, vec3) : Model *
++ AddModel (const char *p_id, const char *, vec3, vec3, vec3) : Model *
++ AddMeshlessModel (Model *) : Model *
++ AddMeshlessModel (const char *, Model *) : Model *
++ CreateModel (vec3, vec3, vec3, vector<string>) : Model *
++ CreateModel (const char *, vec3, vec3, vec3, vector<string>) : Model *
++ GetModel (const char *) : Model *
++ DeleteModel (const char *) : void
++ DeleteModel (Model *) : void
+..
++ AddShader (const char *, const char *) : Shader *
++ AddShader (const char *, const char *, const char *) : Shader *
++ GetShader (const char *) : Shader *
+..
++ Print () : void
+..
+- _loadModelNodeRecursively (Model *, aiNode *, aiScene *) : void
+- _loadModelMesh (Model *, aiMesh *, aiScene *) : void
+- _deleteModel (const char *, Model *) : void
+- _deleteMesh (const char *, Mesh *) : void
+..
+- _copy (const AssetManager&) : void
+- _clear () : void
+}
+
+@enduml

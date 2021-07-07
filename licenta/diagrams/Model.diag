@@ -1,0 +1,73 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam defaultFontName helvetica
+skinparam monochrome true
+skinparam roundCorner 10
+skinparam minClassWidth 320
+
+class Model {
+- _meshes :  vector<Mesh*>
+- _filepath :  string
+- _rootpath :  string
+- _filename :  string
+..
+- _position : vec3
+- _rotation : vec3
+- _scale : vec3
+- _worldMatrix : mat4
+..
+- _overrideDiffuseMap : Texture *
+--
++ Model ()
++ Model (vec3, vec3, vec3);
++ ~Model ()
+..
++ Load () : bool
++ Load (const char *) : bool
++ Render (const double &, const double &) : void
+..
++ AddMesh (Mesh *) : void
+{abstract} + Meshes () :  vector<Mesh*> *
+{abstract} + AllMeshes () :  vector<Mesh*>
+..
++ WorldMatrix () : mat4 *
++ Position () :  vec3
++ Filepath (const char *) : void
++ Filepath () : const char *
++ Rootpath () : const char *
++ Filename () : const char *
++ OverrideDiffuseMap () : Texture *
++ OverrideDiffuseMap (Texture *) : void
+..
+{abstract} + DeleteRuntimeGeneratedMeshes () : void
+..
+- _copy (const Model&) : void
+- _clear () : void
+}
+
+class LODModel {
+- _currentLODLevel : int
+- _lodMeshes :  map<int,  vector<Mesh*>>
+- _runtimeGeneratedMeshes :  vector<Mesh*>
+--
++ LODModel ()
++ LODModel (vec3, vec3, vec3);
++ ~LODModel ()
+..
+{abstract} + Meshes () :  vector<Mesh*> *
+{abstract} + AllMeshes () :  vector<Mesh*>
+{abstract} + DeleteRuntimeGeneratedMeshes () : void
+..
++ CurrentLOD () : int
++ CurrentLOD (int) : void
+..
+- _addRuntimeGeneratedMesh (Mesh *) : void
+{abstract} - _requestLODMeshes (int) :  vector<Mesh*>
+..
+- _copy (const LODModel&) : void
+- _clear () : void
+}
+
+Model ^-- LODModel
+
+@enduml

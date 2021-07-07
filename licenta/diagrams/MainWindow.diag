@@ -1,0 +1,41 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam defaultFontName helvetica
+skinparam monochrome true
+skinparam roundCorner 10
+skinparam minClassWidth 320
+
+class MainWindow {
+- _window : GLFWwindow *
+..
+- _originalWidth : GLint
+- _originalHeight : GLint
+- _windowWidth : GLint
+- _windowHeight : GLint
+..
+- _keyPressed : bool [ ]
+- _mouseInputInitialised : bool
+- _mouseLastPosition : vec2
+- _mouseDeltaPosition : vec2
+--
++ MainWindow ()
++ MainWindow (GLint, GLint)
++ ~MainWindow ()
+..
++ Initialise () : int
++ SwapBuffers () : void
+..
++ WindowWidth () : GLint
++ WindowHeight () : GLint
++ ShouldClose () : bool
++ KeyPressedArray () : bool *
++ MouseDelta () : vec2
+..
+- _initialiseCallbacks () : void
+- _copy (const MainWindow&) : void
+- _clear () : void
+{static} - _onKeyChange (GLFWwindow*, int, int, int, int) : void
+{static} - _onMouseChange (GLFWwindow*, double, double) : void
+}
+
+@enduml

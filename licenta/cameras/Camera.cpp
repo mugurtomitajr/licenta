@@ -21,7 +21,7 @@ Camera::Camera() {
     this -> _pitch = 0.0f;
     this -> _roll = 0.0f; // TODO: roll not used
     
-    this -> _moveSpeed = 10.0f; // Only for Controllable Camera - can remove it from here
+    this -> _moveSpeed = 50.0f; // Only for Controllable Camera - can remove it from here
     this -> _turnSpeed = 0.1f;
     
     this -> _projectionMatrix = glm::mat4(1.0f);
@@ -116,7 +116,7 @@ void Camera::_clear() {
     this -> _pitch = 0.0f;
     this -> _roll = 0.0f; // TODO: roll not used
     
-    this -> _moveSpeed = 10.0f;
+    this -> _moveSpeed = 50.0f;
     this -> _turnSpeed = 0.1f;
     
     this -> _projectionMatrix = glm::mat4(1.0f);

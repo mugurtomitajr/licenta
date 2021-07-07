@@ -50,7 +50,7 @@ int MainWindow::Initialise() {
     
     this -> _initialiseCallbacks();
     
-    glfwSetInputMode(this -> _window, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
+    glfwSetInputMode(this -> _window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
     glewExperimental = GL_TRUE;
 

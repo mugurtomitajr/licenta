@@ -1,0 +1,76 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam defaultFontName helvetica
+skinparam monochrome true
+skinparam roundCorner 10
+skinparam minClassWidth 320
+
+class Light {
+- _color : glm::vec3
+- _diffuseIntensity : GLfloat
+- _ambientIntensity : GLfloat
+- _specularIntensity : GLfloat
+--
++ Light()
++ Light(glm::vec3, GLfloat, GLfloat, GLfloat)
++ ~Light()
+..
+{abstract} + Use(GLuint, GLuint, GLuint, GLuint) : void
+..
+- _copy (const Light&) : void
+- _clear () : void
+}
+
+class DirectionalLight {
+- _direction : glm::vec3
+--
++ DirectionalLight()
++ DirectionalLight(glm::vec3, glm::vec3, GLfloat, GLfloat, GLfloat)
++ ~DirectionalLight()
+..
+{abstract} + Use(GLuint, GLuint, GLuint, GLuint, GLuint) : void
+..
+- _copy (const DirectionalLight&) : void
+- _clear () : void
+}
+
+class PointLight {
+- _position : glm::vec3
+- _attenuation : glm::vec3
+--
++ PointLight()
++ PointLight(glm::vec3, glm::vec3, glm::vec3, GLfloat, GLfloat, GLfloat)
++ ~PointLight()
+..
+{abstract} + Use(GLuint, GLuint, GLuint, GLuint, GLuint, GLuint) : void
+..
++ Position(glm::vec3) : void
++ Position() : glm::vec3
+..
+- _copy (const PointLight&) : void
+- _clear () : void
+}
+
+class SpotLight {
+- _direction : glm::vec3
+- _edge : GLfloat
+- _transformedEdge : GLfloat
+--
++ SpotLight()
++ SpotLight(glm::vec3, GLfloat, glm::vec3, glm::vec3, glm::vec3, GLfloat, GLfloat, GLfloat)
++ ~SpotLight()
+..
+{abstract} + Use(GLuint, GLuint, GLuint, GLuint, GLuint, GLuint, GLuint, Gluint) : void
+..
++ Direction(glm::vec3) : void
++ Direction() : glm::vec3
+..
+- _copy (const SpotLight&) : void
+- _clear () : void
+}
+
+Light ^-- DirectionalLight
+Light ^-- PointLight
+PointLight ^-- SpotLight
+
+@enduml

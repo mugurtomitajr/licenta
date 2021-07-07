@@ -1,0 +1,90 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam defaultFontName helvetica
+skinparam monochrome true
+skinparam roundCorner 10
+skinparam minClassWidth 320
+
+class Instance {
+- _runtimeQueueManager : RuntimeQueueManager *
+- _assetManager : AssetManager *
+..
+- _shader : Shader *
+- _model : Model *
+..
+- _parent : Instance *
+- _children : vector<Instance*>
+..
+- _position : vec3
+- _rotation : vec3
+- _scale : vec3
+- _velocity : vec3
+- _acceleration : vec3
+..
+- _worldMatrix : mat4
+- _worldMatrixUpToDate : bool
+- _maximumVelocity : GLfloat
+- _frictionCoefficient : GLfloat
+- _mobileInstance : bool
+..
+- _overrideDiffuseMap : Texture *
+- _overrideLightingMaterial : LightingMaterial *
+--
++ Instance ()
++ Instance (Instance *, vec3, vec3, vec3)
++ ~Instance ()
+..
++ Load (Shader *, Model *) : bool
+{abstract} + LoadCustomModelId () : const char*
+{abstract} + LoadCustomModelFilepath () : const char*
+{abstract} + LoadCustomModelPosition () : vec3
+{abstract} + LoadCustomModelRotation () : vec3
+{abstract} + LoadCustomModelScale () : vec3
+{abstract} + LoadOtherInstances (AssetManager *, RuntimeQueueManager *) : void
+..
+{abstract} + Start () : void
+{abstract} + MasterUpdate (double, const vec2 &, bool *) : void
+{abstract} + Update (double, const vec2 &, bool *) : void
++ Render (double, double) : void
+{abstract} + Stop () : void
+..
++ WorldMatrix () : mat4 *
++ WorldPosition () : vec3
++ Position () : vec3
++ Position (vec3) : void
++ Rotation () : vec3
++ Rotation (vec3) : void
++ Scale () : vec3
++ Scale (vec3) : void
+..
++ Velocity () : vec3
++ Velocity (vec3) : void
++ Acceleration () : vec3
++ Acceleration (vec3) : void
++ MaximumVelocity () : GLfloat
++ MaximumVelocity (GLfloat) : void
++ FrictionCoefficient () : GLfloat
++ FrictionCoefficient (GLfloat) : void
++ MobileInstance () : bool
++ MobileInstance (bool) : void
+..
++ OverrideDiffuseMap () : Texture *
++ OverrideDiffuseMap (Texture *) : void
++ OverrideLightingMaterial () : LightingMaterial *
++ OverrideLightingMaterial (LightingMaterial *) : void
++ CurrentModel () : Model *
++ CurrentModel (Model *) : void
+..
++ Parent () : Instance *
++ Parent (Instance* p_parent) : void
++ CurrentShader () : Shader *
++ Children () : vector<Instance*> *
++ AddChild (Instance *) : void
+..
+- _recalculateWorldMatrix () : void
+..
+- _copy (const Instance&) : void
+- _clear () : void
+}
+
+@enduml

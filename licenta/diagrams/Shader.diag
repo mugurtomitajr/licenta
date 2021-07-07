@@ -1,0 +1,91 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam defaultFontName helvetica
+skinparam monochrome true
+skinparam roundCorner 10
+skinparam minClassWidth 320
+
+class Shader {
+- _glId : GLuint
+- _uniformWorldMatrix : GLuint
+- _uniformViewMatrix : GLuint
+- _uniformProjectionMatrix : GLuint
+- _uniformSpecularIntensity : GLuint
+- _uniformSpecularPower : GLuint
+- _uniformObserverPosition : GLuint
+- _uniformNumOfPointLights : GLuint
+- _uniformNumOfSpotLights : GLuint
+..
+- _uniformDirectionalLight : LightDirectionalUniformLayout
+..
+- _numOfPointLights : unsigned int
+- _uniformPointLights : LightPointUniformLayout [ ]
+..
+- _numOfSpotLights : unsigned int
+- _uniformSpotLights : LightSpotUniformLayout [ ]
+..
+- _defaultLightingMaterial : LightingMaterial *
+- _defaultDiffuseMap : Texture *
+--
++ Shader ()
++ ~Shader ()
+..
++ Load (const char *, const char *) : bool
++ BindDefaults (LightingMaterial *, Texture *) : void
++ Use () : void
+{static} + Remove () : void
+..
++ ApplyWorldMatrix (const mat4 &) : void
++ ApplyViewMatrix (const mat4 &) : void
++ ApplyProjectionMatrix (const mat4 &) : void
++ ApplyObserverPosition (const vec3 &) : void
+..
++ ApplyLightingMaterial (const LightingMaterial &) : void
++ ApplyDefaultLightingMaterial () : void
++ ApplyDiffuseMap (const Texture &) : void
++ ApplyDefaultDiffuseMap () : void
+..
++ ApplyDirectionalLight (DirectionalLight *) : void
++ ApplyPointLights (PointLight**, unsigned int) : void
++ ApplySpotLights (SpotLight**, unsigned int) : void
+..
+- _compileShader (const char *, const char *) : bool
+- _addShaderStage (GLuint, const char *, GLenum) : void
+..
+- _copy (const Shader&) : void
+- _clear () : void
+}
+
+class LightCommonUniformLayout {
+    + uniformColor : GLuint
+    + uniformAmbientIntensity : GLuint
+    + uniformDiffuseIntensity : GLuint
+    + uniformSpecularIntensity : GLuint
+}
+
+class LightDirectionalUniformLayout {
+    + shared : LightCommonUniformLayout
+    + uniformDirection : GLuint
+}
+
+class LightPointUniformLayout {
+    + shared : LightCommonUniformLayout
+    + uniformPosition : GLuint
+    + uniformAttenuation : GLuint
+}
+
+class LightSpotUniformLayout {
+    + point : LightPointUniformLayout
+    + uniformDirection : GLuint
+    + uniformEdge : GLuint
+}
+
+Shader --> LightDirectionalUniformLayout
+Shader --> LightPointUniformLayout
+Shader --> LightSpotUniformLayout
+
+LightCommonUniformLayout <-- LightDirectionalUniformLayout
+LightCommonUniformLayout <-- LightPointUniformLayout
+LightPointUniformLayout <-- LightSpotUniformLayout
+
+@enduml

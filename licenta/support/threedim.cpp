@@ -60,42 +60,64 @@ threedim::MeshData threedim::GenerateCube() {
 }
 
 threedim::MeshData threedim::GeneratePerlinPlane(glm::ivec2 index, unsigned int p_resolution) {
-    GLfloat *heightMap = new float[p_resolution * p_resolution];
-    std::memset(heightMap, 0, sizeof(GLfloat) * p_resolution * p_resolution);
-    GLfloat scale = 1.0f;
+    unsigned int doubleResolution = p_resolution * p_resolution;
+    GLfloat *heightMap = new float[doubleResolution];
+    std::memset(heightMap, 0, sizeof(GLfloat) * doubleResolution);
+    GLfloat sampleScale = 1.0f;
+    GLfloat terrainScale = 20.0f;
+    
+    //GLfloat *perlinSeed = new GLfloat[p_resolution * p_resolution];
+    //generatePerlinSeed(p_resolution, perlinSeed);
+    //perlinNoise2D(p_resolution, perlinSeed, 4, 1.0f, heightMap);
+    
     const siv::PerlinNoise perlin(123);
+    PerlinNoise2D perlinNoise = PerlinNoise2D(256);
+    perlinNoise.Start(123);
+    
+    float mini = 200000;
+    float maxi = -200000;
     
     for(unsigned int i = 0; i < p_resolution; ++i) {
         for(unsigned int j = 0; j < p_resolution; ++j) {
             int loc = i * p_resolution + j;
-            heightMap[loc] = perlin.accumulatedOctaveNoise2D_0_1((index.y + ((float)i / (float)(p_resolution - 1))) * scale, (index.x + ((float)j / (float)(p_resolution - 1))) * scale, 8);
-            
-            //heightMap[loc] = (heightMap[loc] - 1) * (heightMap[loc] - 1) * -1 + 1;
-            /*if(heightMap[loc] > 0.5f) {
-                heightMap[loc] = heightMap[loc] * heightMap[loc] * 2.0f;
-            } else {
-                heightMap[loc] = (heightMap[loc] - 1) * (heightMap[loc] - 1) * -2 + 1;
-            }*/
-            
-            //heightMap[loc] = CurveLongValleysSteepMountains(heightMap[loc]);
-            //heightMap[loc] = CurveSmoothTransition(heightMap[loc]);
-            //heightMap[loc] = CurvePlatous(heightMap[loc]);
-            heightMap[loc] = CurveValleysAndPlatous(heightMap[loc]);
-            //heightMap[loc] = CurveThreeLevels(heightMap[loc]);
-            heightMap[loc] = heightMap[loc] * 20.0f;
+            //heightMap[loc] = perlin.accumulatedOctaveNoise2D_0_1((index.y + ((float)i / (float)(p_resolution - 1))) * scale, (index.x + ((float)j / (float)(p_resolution - 1))) * scale, 8);
+            heightMap[loc] = perlinNoise.Sample((index.y + ((float)i / (float)(p_resolution - 1))) * sampleScale, (index.x + ((float)j / (float)(p_resolution - 1))) * sampleScale);
+            if(heightMap[loc] < mini) {
+                mini = heightMap[loc];
+            }
+            if(heightMap[loc] > maxi) {
+                maxi = heightMap[loc];
+            }
         }
     }
     
+    float fractionalPart = 0.0f;
+    int integerPart = 0;
+    for(int i = 0; i < doubleResolution; ++i) {
+        heightMap[i] = heightMap[i] + 0.5f;
+        integerPart = (int) std::floor(heightMap[i]);
+        fractionalPart = heightMap[i] - integerPart;
+        
+        //heightMap[i] = integerPart + fractionalPart;
+        heightMap[i] = integerPart + CurveValleysAndPlatous(fractionalPart);
+        //heightMap[i] = integerPart + CurveLongValleysSteepMountains(fractionalPart);
+        //heightMap[i] = integerPart + CurveSmoothTransition(fractionalPart);
+        
+        
+        heightMap[i] *= terrainScale;
+    }
+    
+    //fprintf(stdout, "mini: %llf; maxi: %llf;\n", mini, maxi);
+    
     AveragePointsOnEdgeToLowestResolution(p_resolution, heightMap);
     threedim::MeshData result = GeneratePlane(p_resolution, heightMap);
+    //delete[] perlinSeed;
     delete[] heightMap;
     return result;
 }
 
 GLfloat threedim::CurveLongValleysSteepMountains(GLfloat p_in) {
-    GLfloat out = p_in * p_in + 1;
-    out = -(out - 1) * (out - 1) + 1;
-    out = -out + 1;
+    GLfloat out = p_in * p_in * p_in * p_in;
     return glm::clamp(out, 0.0f, 1.0f);
 }
 
@@ -132,10 +154,10 @@ GLfloat threedim::CurveThreeLevels(GLfloat p_in) {
 void threedim::AveragePointsOnEdgeToLowestResolution(unsigned int p_resolution, GLfloat *p_heightMap) {
     int relevantPow = 0;
     
-    if(p_resolution == 17) relevantPow = 2;
-    else if(p_resolution == 33) relevantPow = 4;
-    else if(p_resolution == 65) relevantPow = 8;
-    else if(p_resolution == 129) relevantPow = 16;
+    if(p_resolution == 17) relevantPow = 1;
+    else if(p_resolution == 33) relevantPow = 2;
+    else if(p_resolution == 65) relevantPow = 4;
+    else if(p_resolution == 129) relevantPow = 8;
     
     if(relevantPow == 0) {
         return; // not a good resolution
@@ -276,4 +298,46 @@ threedim::MeshData threedim::GeneratePlaneBySkipCount(unsigned int p_skip, GLflo
     RecalculateNormals(result.indices.data(), result.indices.size(), result.vertices.data(), result.vertices.size(), 8, 5);
     
     return result;
+}
+
+
+
+void threedim::generatePerlinSeed(int p_resolution, GLfloat *p_seed) {
+    int length = p_resolution * p_resolution;
+    for (int i = 0; i < length; ++i) {
+        p_seed[i] = (GLfloat) rand() / (GLfloat) RAND_MAX;
+    }
+}
+
+void threedim::perlinNoise2D(int p_resolution, GLfloat *p_seed, int p_numOfOctaves, GLfloat p_bias, GLfloat *p_output){
+    for (int x = 0; x < p_resolution; x++) {
+        for (int y = 0; y < p_resolution; y++) {
+            
+            GLfloat fNoise = 0.0f;
+            GLfloat fScaleAcc = 0.0f;
+            GLfloat fScale = 1.0f;
+
+            for (int o = 0; o < p_numOfOctaves; o++) {
+                int nPitch = (p_resolution - 1) >> o;
+                int nSampleX1 = (x / nPitch) * nPitch;
+                int nSampleY1 = (y / nPitch) * nPitch;
+                
+                int nSampleX2 = (nSampleX1 + nPitch) % p_resolution;
+                int nSampleY2 = (nSampleY1 + nPitch) % p_resolution;
+
+                GLfloat fBlendX = (GLfloat)(x - nSampleX1) / (GLfloat)nPitch;
+                GLfloat fBlendY = (GLfloat)(y - nSampleY1) / (GLfloat)nPitch;
+
+                GLfloat fSampleT = (1.0f - fBlendX) * p_seed[nSampleY1 * p_resolution + nSampleX1] + fBlendX * p_seed[nSampleY1 * p_resolution + nSampleX2];
+                GLfloat fSampleB = (1.0f - fBlendX) * p_seed[nSampleY2 * p_resolution + nSampleX1] + fBlendX * p_seed[nSampleY2 * p_resolution + nSampleX2];
+
+                fScaleAcc += fScale;
+                fNoise += (fBlendY * (fSampleB - fSampleT) + fSampleT) * fScale;
+                fScale = fScale / p_bias;
+            }
+
+            p_output[y * p_resolution + x] = fNoise / fScaleAcc;
+        }
+    }
+    
 }

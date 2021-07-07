@@ -1,0 +1,63 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam defaultFontName helvetica
+skinparam monochrome true
+skinparam roundCorner 10
+skinparam minClassWidth 320
+
+class SceneManager {
+- _assetManager : AssetManager *
+- _runtimeQueueManager : RuntimeQueueManager
+..
+- _instances : vector<Instance*>
+- _instancesId : map<string, Instance*>
+- _instanceShaderLink : map<Shader*, vector<Instance*>>
+- _instancesParentsOnly : vector<Instance*>
+..
+- _directionalLight : DirectionalLight
+..
+- _pointLights : vector<PointLight*>
+- _pointLightsId : map<string, PointLight*>
+..
+- _spotLights : vector<SpotLight*>
+- _spotLightsId : map<string, SpotLight*>
+--
++ SceneManager ()
++ SceneManager (AssetManager *);
++ ~SceneManager ()
+..
++ AddInstance (const char *, const char *, Instance *, vec3, vec3, vec3) : Instance *
++ AddInstance (const char *, const char *, const char *, Instance *, vec3 , vec3, vec3 ) : Instance *
++ AddInstance (const char *, Instance *) : Instance *
++ AddInstance (const char *, const char *, Instance *) : Instance *
++ GetInstance (const char *) : Instance *
+..
++ SetDirectionalLight (vec3, vec3, GLfloat, GLfloat, GLfloat) : DirectionalLight *
++ DirectionalLightReference () : DirectionalLight *
+..
++ AddPointLight (vec3, vec3, vec3, GLfloat, GLfloat, GLfloat) : PointLight *
++ AddPointLight (const char *, vec3, vec3, vec3, GLfloat, GLfloat, GLfloat) : PointLight *
++ GetPointLight (const char *) : PointLight *
++ PointLightsArray () : PointLight **
++ PointLightsArrayCount () : unsigned int
+..
++ AddSpotLight (vec3, GLfloat, vec3, vec3, vec3, GLfloat, GLfloat, GLfloat) : SpotLight *
++ AddSpotLight (const char *, vec3, GLfloat, vec3, vec3, vec3, GLfloat, GLfloat, GLfloat) : SpotLight *
++ GetSpotLight (const char *) : SpotLight *
++ SpotLightsArray () : SpotLight **
++ SpotLightsArrayCount () : unsigned int
+..
++ InstanceShaderLinkArray () : map<Shader*, vector<Instance*>> *
++ Instances () : vector<Instance*>*
++ InstancesParentsOnly () : vector<Instance*>*
+..
++ RuntimeQueueCheck () : void
++ Print (): void
+..
+- _deleteInstance (const char *, Instance *, bool ) : bool
+..
+- _copy (const SceneManager&) : void
+- _clear () : void
+}
+
+@enduml

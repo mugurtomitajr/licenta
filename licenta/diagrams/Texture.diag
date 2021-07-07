@@ -1,0 +1,30 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam defaultFontName helvetica
+skinparam monochrome true
+skinparam roundCorner 10
+skinparam minClassWidth 320
+
+class Texture {
+- _glId : GLuint
+- _width : int
+- _height : int
+- _bitDepth : int
+- _hasAlphaChannel : bool
+- _filepath : const char *
+--
++ Texture ()
++ Texture (const char *);
++ ~Texture ()
+..
++ Load () : bool
++ Use () : void
+{static} + Remove () : void
+..
++ IsLoaded () : bool
+..
+- _copy (const Texture&) : void
+- _clear () : void
+}
+
+@enduml

@@ -90,7 +90,7 @@ void ExampleScene::_loadInstances() {
 }
 
 void ExampleScene::_loadLights() {
-    this -> _sceneManager.SetDirectionalLight(glm::vec3(0.0f, 0.0f, 1.0f), glm::vec3(1.0f, 1.0f, 1.0f), 0.20f, 0.2f, 0.2f);
+    this -> _sceneManager.SetDirectionalLight(glm::vec3(0.0f, 0.0f, 1.0f), glm::vec3(1.0f, 1.0f, 1.0f), 0.40f, 0.4f, 0.4f);
     this -> _sceneManager.AddSpotLight("drone-spot-light-left", glm::vec3(0.0f, 0.0f, 1.0f), 40.0f, glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.02f, 0.02f, 0.2f), glm::vec3(1.0f, 1.0f, 1.0f), 1.8f, 1.6f, 1.2f);
     this -> _sceneManager.AddSpotLight("drone-spot-light-right", glm::vec3(0.0f, 0.0f, 1.0f), 40.0f, glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.02f, 0.02f, 0.2f), glm::vec3(1.0f, 1.0f, 1.0f), 1.8f, 1.6f, 1.2f);
     

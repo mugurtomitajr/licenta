@@ -26,33 +26,7 @@ double lastTime = 0.0f;
 double fpsPrintCumulativeTime = 0.0f;
 int fpsCounter = 0;
 
-Scene* requestScene(int sceneNb) {
-    switch (sceneNb) {
-        case 0:
-            return new ExampleScene();
-        case 1:
-            return new ExampleScene();
-        case 2:
-            return new ExampleScene();
-        case 3:
-            return new ExampleScene();
-        case 4:
-            return new ExampleScene();
-        case 5:
-            return new ExampleScene();
-        case 6:
-            return new ExampleScene();
-        case 7:
-            return new ExampleScene();
-        case 8:
-            return new ExampleScene();
-        case 9:
-            return new ExampleScene();
-            
-        default:
-            return new ExampleScene();
-    }
-}
+Scene* requestScene(int sceneNb);
 
 int main(int argc, const char * argv[]) {
     
@@ -90,7 +64,7 @@ int main(int argc, const char * argv[]) {
         
         glfwPollEvents();
         
-        glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+        glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         
         glm::vec2 deltaMouse = mainWindow.MouseDelta();
@@ -120,4 +94,32 @@ int main(int argc, const char * argv[]) {
     
     return 0;
     
+}
+
+Scene* requestScene(int sceneNb) {
+    switch (sceneNb) {
+        case 0:
+            return new ExampleScene();
+        case 1:
+            return new SimpleDemoScene();
+        case 2:
+            return new ExampleScene();
+        case 3:
+            return new SimpleDemoScene();
+        case 4:
+            return new ExampleScene();
+        case 5:
+            return new SimpleDemoScene();
+        case 6:
+            return new ExampleScene();
+        case 7:
+            return new SimpleDemoScene();
+        case 8:
+            return new ExampleScene();
+        case 9:
+            return new SimpleDemoScene();
+            
+        default:
+            return new ExampleScene();
+    }
 }

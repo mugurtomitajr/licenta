@@ -1,0 +1,32 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam defaultFontName helvetica
+skinparam monochrome true
+skinparam roundCorner 10
+skinparam minClassWidth 320
+
+class Mesh {
+- _vao : GLuint
+- _vbo : GLuint
+- _ibo : GLuint
+- _numOfIndices : unsigned int
+- _diffuseMap : Texture*
+- _propertiesMaterial : LightingMaterial *
+--
++ Mesh ()
++ ~Mesh ()
+..
++ Load (GLfloat, unsigned int, unsigned int*, unsigned int) : bool
++ Render (double, double) : void
+{static} + Remove () : void
+..
++ DiffuseMap (Texture*) : void
++ DiffuseMap () : Texture*
++ PropertiesMaterial (LightingMaterial*) : void
++ PropertiesMaterial () : LightingMaterial*
+..
+- _copy (const Mesh&) : void
+- _clear () : void
+}
+
+@enduml

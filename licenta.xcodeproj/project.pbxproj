@@ -79,6 +79,8 @@
 		B71BC69D268F355B00978E28 /* Skybox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC695268F355A00978E28 /* Skybox.cpp */; };
 		B71BC69E268F355B00978E28 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC696268F355A00978E28 /* Camera.cpp */; };
 		B71BC69F268F355B00978E28 /* Skybox.hpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC697268F355A00978E28 /* Skybox.hpp */; };
+		B786B15526960274009A41B8 /* PerlinNoise2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B786B15326960274009A41B8 /* PerlinNoise2D.cpp */; };
+		B786B15626960274009A41B8 /* PerlinNoise2D.hpp in Sources */ = {isa = PBXBuildFile; fileRef = B786B15426960274009A41B8 /* PerlinNoise2D.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -254,6 +256,8 @@
 		B71BC6AC268F3E3400978E28 /* default.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = default.vert; sourceTree = "<group>"; };
 		B71BC6AD268F3E3400978E28 /* ground.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ground.frag; sourceTree = "<group>"; };
 		B71BC6AE268F3E3400978E28 /* water.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = water.frag; sourceTree = "<group>"; };
+		B786B15326960274009A41B8 /* PerlinNoise2D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PerlinNoise2D.cpp; path = support/PerlinNoise2D.cpp; sourceTree = "<group>"; };
+		B786B15426960274009A41B8 /* PerlinNoise2D.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = PerlinNoise2D.hpp; path = support/PerlinNoise2D.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +339,8 @@
 		B71BC5B7268F32E000978E28 /* support */ = {
 			isa = PBXGroup;
 			children = (
+				B786B15326960274009A41B8 /* PerlinNoise2D.cpp */,
+				B786B15426960274009A41B8 /* PerlinNoise2D.hpp */,
 				B71BC5AA268F32D900978E28 /* calculations.cpp */,
 				B71BC5AC268F32D900978E28 /* calculations.hpp */,
 				B71BC5AE268F32D900978E28 /* constants.hpp */,
@@ -669,6 +675,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B786B15526960274009A41B8 /* PerlinNoise2D.cpp in Sources */,
+				B786B15626960274009A41B8 /* PerlinNoise2D.hpp in Sources */,
 				B71BC698268F355A00978E28 /* FollowingCamera.hpp in Sources */,
 				B71BC699268F355A00978E28 /* FollowingCamera.cpp in Sources */,
 				B71BC69A268F355A00978E28 /* ControllableCamera.cpp in Sources */,

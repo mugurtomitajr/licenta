@@ -1,0 +1,30 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam defaultFontName helvetica
+skinparam monochrome true
+skinparam roundCorner 10
+skinparam minClassWidth 320
+
+class PerlinNoise2D {
+- _dimension : unsigned int
+- _dimensionMask : unsigned int
+- _permutations : unsigned int *
+- _vectors : vec3 *
+--
++ PerlinNoise2D ()
++ PerlinNoise2D (unsigned int);
++ ~PerlinNoise2D ()
+..
++ Start (int) : bool
++ Sample (GLfloat, GLfloat) : GLfloat
++ Sample (GLfloat, GLfloat, int, GLfloat, GLfloat) : GLfloat
+..
+- _valueAt (GLfloat, GLfloat) : GLfloat
+- _permute (int, int, int) : int
+- _smoothstep (GLfloat) : GLfloat
+..
+- _copy (const PerlinNoise2D&) : void
+- _clear () : void
+}
+
+@enduml

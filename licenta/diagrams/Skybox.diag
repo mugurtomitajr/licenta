@@ -1,0 +1,23 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam defaultFontName helvetica
+skinparam monochrome true
+skinparam roundCorner 10
+skinparam minClassWidth 320
+
+class Skybox {
+- _mesh : Mesh *
+- _shader : Shader *
+- _glId : GLuint
+--
++ Skybox ()
++ ~Skybox ()
+..
++ Load(Shader *, Mesh *, vector<string>) : bool
++ Render(mat4, mat4) : void
+..
+- _copy (const Skybox&) : void
+- _clear () : void
+}
+
+@enduml

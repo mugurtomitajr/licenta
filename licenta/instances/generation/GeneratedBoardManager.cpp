@@ -27,6 +27,9 @@ void GeneratedBoardManager::Update(double dt, const glm::vec2 &p_mouseDelta, boo
     std::vector<long int> removed = std::vector<long int> ();
     int offsetSearch = 4;
     
+    //currentIndex = glm::ivec2(-2, -1);
+    //offsetSearch = 0;
+    
     for(int i = currentIndex.x - offsetSearch; i <= currentIndex.x + offsetSearch; ++i) {
         for(int j = currentIndex.y - offsetSearch; j <= currentIndex.y + offsetSearch; ++j) {
             loopIndex = i * GENERATED_BOARD_MAX_ELEMENT_SIZE * 2 + j; // * 2 to compensate for indices in j with (-)

@@ -43,6 +43,11 @@ void ControllableCamera::_checkKeysPressed(const double &dt, bool *p_keyPressedA
         moved = true;
     }
     
+    if(abs(direction.y) > EPSILON) {
+        this -> _position += this -> _up * speed * direction.y;
+        moved = true;
+    }
+    
     if(abs(direction.x) > EPSILON) {
         this -> _position += this -> _right * speed * direction.x;
         moved = true;

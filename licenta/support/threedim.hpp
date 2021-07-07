@@ -12,6 +12,7 @@
 #include <GL/glew.h>
 #include <glm/glm.hpp>
 
+#include "PerlinNoise2D.hpp"
 #include "../library/perlin_noise.hpp"
 
 namespace threedim {
@@ -44,6 +45,10 @@ GLfloat CurvePlatous(GLfloat p_in);
 GLfloat CurveValleysAndPlatous(GLfloat p_in);
 
 GLfloat CurveThreeLevels(GLfloat p_in);
+
+void generatePerlinSeed(int p_resolution, GLfloat *p_seed);
+
+void perlinNoise2D(int p_resolution, GLfloat *p_seed, int p_numOfOctaves, GLfloat p_bias, GLfloat *p_output);
 
 };
 

@@ -23,10 +23,10 @@ void GeneratedBoardTile::LoadOtherInstances(AssetManager *p_assetManager, Runtim
     Instance::LoadOtherInstances(p_assetManager, p_runtimeQueueManager);
     
     std::map<int, int> lodLevels = std::map<int, int>();
-    lodLevels[0] = 65;
-    lodLevels[1] = 33;
-    lodLevels[2] = 17;
-    lodLevels[3] = 9;
+    lodLevels[0] = 129;
+    lodLevels[1] = 65;
+    lodLevels[2] = 33;
+    lodLevels[3] = 17;
     
     GeneratedTileModel *model = new GeneratedTileModel(this -> _index, lodLevels, glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(1.0f, 1.0f, 1.0f));
     model -> CurrentLOD(3);

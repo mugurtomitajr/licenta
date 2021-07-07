@@ -1,0 +1,56 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam defaultFontName helvetica
+skinparam monochrome true
+skinparam roundCorner 10
+skinparam minClassWidth 320
+
+class Camera {
+- _verticalFov : GLfloat
+- _displayRatio : GLfloat
+..
+- _position : vec3
+- _speed : vec3
+- _moveSpeed : GLfloat
+- _turnSpeed : GLfloat
+..
+- _yaw : GLfloat
+- _pitch : GLfloat
+- _roll  : GLfloat
+..
+- _front : vec3
+- _up : vec3
+- _right : vec3
+- _globalUp : vec3
+..
+- _projectionMatrix : mat4
+- _projectionMatrixUpToDate : bool
+..
+- _viewMatrix : mat4
+- _viewMatrixUpToDate : bool
+--
++ Camera ()
++ Camera (const char *);
++ ~Camera ()
+..
++ Start () : void
++ Update (const double &dt, vec2 p_deltaMouse, bool *p_keyPressedArray) : void
++ Stop () : void
+..
++ ViewMatrix () : mat4
++ ProjectionMatrix () : mat4
+..
++ Position () : vec3
++ Front () : vec3
++ Up () : vec3
++ Right () : vec3
+..
+- _recalculateVectors () : void
+- _recalculateViewMatrix () : void
+- _recalculateProjectionMatrix () : void
+..
+- _copy (const Camera&) : void
+- _clear () : void
+}
+
+@enduml
