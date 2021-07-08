@@ -57,7 +57,6 @@
 		B71BC666268F347400978E28 /* DirectionalLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC65E268F347400978E28 /* DirectionalLight.cpp */; };
 		B71BC667268F347400978E28 /* PointLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC65F268F347400978E28 /* PointLight.cpp */; };
 		B71BC668268F347400978E28 /* SpotLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC660268F347400978E28 /* SpotLight.cpp */; };
-		B71BC66D268F34A400978E28 /* perlin_noise.hpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC66B268F34A400978E28 /* perlin_noise.hpp */; };
 		B71BC66E268F34A400978E28 /* stb_image.h in Sources */ = {isa = PBXBuildFile; fileRef = B71BC66C268F34A400978E28 /* stb_image.h */; };
 		B71BC679268F34F000978E28 /* FollowingDrone.hpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC673268F34F000978E28 /* FollowingDrone.hpp */; };
 		B71BC67A268F34F000978E28 /* FollowingDrone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC674268F34F000978E28 /* FollowingDrone.cpp */; };
@@ -226,7 +225,6 @@
 		B71BC65E268F347400978E28 /* DirectionalLight.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DirectionalLight.cpp; path = light/DirectionalLight.cpp; sourceTree = "<group>"; };
 		B71BC65F268F347400978E28 /* PointLight.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PointLight.cpp; path = light/PointLight.cpp; sourceTree = "<group>"; };
 		B71BC660268F347400978E28 /* SpotLight.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = SpotLight.cpp; path = light/SpotLight.cpp; sourceTree = "<group>"; };
-		B71BC66B268F34A400978E28 /* perlin_noise.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = perlin_noise.hpp; path = library/perlin_noise.hpp; sourceTree = "<group>"; };
 		B71BC66C268F34A400978E28 /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = stb_image.h; path = library/stb_image.h; sourceTree = "<group>"; };
 		B71BC673268F34F000978E28 /* FollowingDrone.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = FollowingDrone.hpp; path = instances/controllable/FollowingDrone.hpp; sourceTree = "<group>"; };
 		B71BC674268F34F000978E28 /* FollowingDrone.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FollowingDrone.cpp; path = instances/controllable/FollowingDrone.cpp; sourceTree = "<group>"; };
@@ -548,7 +546,6 @@
 		B71BC66A268F348900978E28 /* library */ = {
 			isa = PBXGroup;
 			children = (
-				B71BC66B268F34A400978E28 /* perlin_noise.hpp */,
 				B71BC66C268F34A400978E28 /* stb_image.h */,
 			);
 			name = library;
@@ -697,7 +694,6 @@
 				B71BC67C268F34F000978E28 /* ControllableDrone.cpp in Sources */,
 				B71BC67D268F34F000978E28 /* ControllableDrone.hpp in Sources */,
 				B71BC67E268F34F000978E28 /* ControllableDronePropeller.cpp in Sources */,
-				B71BC66D268F34A400978E28 /* perlin_noise.hpp in Sources */,
 				B71BC66E268F34A400978E28 /* stb_image.h in Sources */,
 				B71BC661268F347400978E28 /* Light.hpp in Sources */,
 				B71BC662268F347400978E28 /* PointLight.hpp in Sources */,

@@ -13,7 +13,6 @@
 #include <glm/glm.hpp>
 
 #include "PerlinNoise2D.hpp"
-#include "../library/perlin_noise.hpp"
 
 namespace threedim {
 

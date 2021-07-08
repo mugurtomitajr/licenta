@@ -70,7 +70,6 @@ threedim::MeshData threedim::GeneratePerlinPlane(glm::ivec2 index, unsigned int 
     //generatePerlinSeed(p_resolution, perlinSeed);
     //perlinNoise2D(p_resolution, perlinSeed, 4, 1.0f, heightMap);
     
-    const siv::PerlinNoise perlin(123);
     PerlinNoise2D perlinNoise = PerlinNoise2D(256);
     perlinNoise.Start(123);
     
@@ -237,14 +236,6 @@ threedim::MeshData threedim::GeneratePerlinPlaneBySkipCount(glm::ivec2 index, un
     
     GLfloat *heightMap = new float[defaultResolution * defaultResolution];
     std::memset(heightMap, 0, sizeof(GLfloat) * defaultResolution * defaultResolution);
-    
-    const siv::PerlinNoise perlin(123);
-    
-    for(unsigned int i = 0; i < defaultResolution; ++i) {
-        for(unsigned int j = 0; j < defaultResolution; ++j) {
-            heightMap[i * defaultResolution + j] = perlin.accumulatedOctaveNoise2D_0_1(index.y + ((float)i / (float)(defaultResolution - 1)), index.x + ((float)j / (float)(defaultResolution - 1)), 16) * 20.0f;
-        }
-    }
     
     threedim::MeshData result = GeneratePlaneBySkipCount(p_skip, heightMap);
     delete[] heightMap;
