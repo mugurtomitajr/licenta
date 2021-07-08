@@ -3,12 +3,12 @@
 //  practice
 //
 
-#include "ExampleScene.hpp"
+#include "Scene00.hpp"
 
-ExampleScene::ExampleScene() : Scene() {}
-ExampleScene::~ExampleScene() { this -> _clear(); }
+Scene00::Scene00() : Scene() {}
+Scene00::~Scene00() { this -> _clear(); }
 
-void ExampleScene::Start() {
+void Scene00::Start() {
     this -> _data.drone = this -> _sceneManager.GetInstance("drone");
     this -> _data.water = this -> _sceneManager.GetInstance("water");
     
@@ -21,7 +21,7 @@ void ExampleScene::Start() {
     Scene::Start();
 }
 
-void ExampleScene::Update(double dt, const glm::vec2 &p_deltaMouse, bool *p_keyPressedArray) {
+void Scene00::Update(double dt, const glm::vec2 &p_deltaMouse, bool *p_keyPressedArray) {
     Scene::Update(dt, p_deltaMouse, p_keyPressedArray);
     
     glm::vec3 spotPosition = this -> _data.drone -> WorldPosition() + (this -> _camera -> Front() * 0.4f);
@@ -42,11 +42,11 @@ void ExampleScene::Update(double dt, const glm::vec2 &p_deltaMouse, bool *p_keyP
     //this -> _data.water -> Position(glm::vec3(this -> _camera -> Position().x, 0.0f, this -> _camera -> Position().z));
 }
 
-void ExampleScene::Stop() {
+void Scene00::Stop() {
     
 }
 
-void ExampleScene::_loadShaders() {
+void Scene00::_loadShaders() {
     this -> _assetManager.AddShader("ground", "resources/shaders/ground.vert", "resources/shaders/ground.frag");
     this -> _assetManager.GetShader("ground") -> BindDefaults(this -> _assetManager.GetLightingMaterial("dull"), this -> _assetManager.AddTexture("grass", "resources/textures/grass-repeating-2.jpg"));
     
@@ -54,11 +54,11 @@ void ExampleScene::_loadShaders() {
     this -> _assetManager.GetShader("water") -> BindDefaults(this -> _assetManager.GetLightingMaterial("shiny"), this -> _assetManager.AddTexture("water", "resources/textures/water-1.jpeg"));
 }
 
-void ExampleScene::_loadTextures() {
+void Scene00::_loadTextures() {
     Scene::_loadTextures();
 }
 
-void ExampleScene::_loadModels() {
+void Scene00::_loadModels() {
     Scene::_loadModels();
     
     threedim::MeshData meshData = threedim::GeneratePlane(20, nullptr);
@@ -68,7 +68,7 @@ void ExampleScene::_loadModels() {
     //this -> _assetManager.AddModel("bloc", "resources/models/bloc/Blocuri vip.obj", glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(-90.0f, 0.0f, 0.0f), glm::vec3(0.001f, 0.001f, 0.001f));
 }
 
-void ExampleScene::_loadInstances() {
+void Scene00::_loadInstances() {
     ControllableDrone *drone = new ControllableDrone(nullptr, glm::vec3(0.0f, 20.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(4.0f, 4.0f, 4.0f));
     this -> _sceneManager.AddInstance("drone", "default", drone);
     
@@ -89,7 +89,7 @@ void ExampleScene::_loadInstances() {
     this -> _data.boardManager = boardManager;
 }
 
-void ExampleScene::_loadLights() {
+void Scene00::_loadLights() {
     this -> _sceneManager.SetDirectionalLight(glm::vec3(0.0f, 0.0f, 1.0f), glm::vec3(1.0f, 1.0f, 1.0f), 0.40f, 0.4f, 0.4f);
     this -> _sceneManager.AddSpotLight("drone-spot-light-left", glm::vec3(0.0f, 0.0f, 1.0f), 40.0f, glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.02f, 0.02f, 0.2f), glm::vec3(1.0f, 1.0f, 1.0f), 1.8f, 1.6f, 1.2f);
     this -> _sceneManager.AddSpotLight("drone-spot-light-right", glm::vec3(0.0f, 0.0f, 1.0f), 40.0f, glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.02f, 0.02f, 0.2f), glm::vec3(1.0f, 1.0f, 1.0f), 1.8f, 1.6f, 1.2f);
@@ -98,11 +98,11 @@ void ExampleScene::_loadLights() {
     this -> _sceneManager.AddPointLight("drone-red-light", glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.4f, 0.6f, 1.0f), glm::vec3(1.0f, 0.8f, 0.8f), 0.4f, 0.4f, 0.4f);
 }
 
-void ExampleScene::_loadCamera(GLfloat p_verticalFov, GLfloat p_displayRatio) {
+void Scene00::_loadCamera(GLfloat p_verticalFov, GLfloat p_displayRatio) {
     Instance* cameraTarget = this -> _sceneManager.GetInstance("drone");
     this -> _camera = new FollowingCamera(cameraTarget, p_verticalFov, p_displayRatio, glm::vec3(0.0f, 40.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), 90.0f, -20.0f);
     this -> _data.boardManager -> CameraObserver(this -> _camera);
 }
 
 
-void ExampleScene::_clear() {}
+void Scene00::_clear() {}

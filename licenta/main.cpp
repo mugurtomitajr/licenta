@@ -16,8 +16,10 @@
 #include "support/constants.hpp"
 
 #include "scenes/Scene.hpp"
-#include "scenes/ExampleScene.hpp"
-#include "scenes/SimpleDemoScene.hpp"
+#include "scenes/Scene00.hpp"
+#include "scenes/Scene01.hpp"
+#include "scenes/Scene02.hpp"
+#include "scenes/Scene03.hpp"
 #include "MainWindow.hpp"
 
 MainWindow mainWindow;
@@ -99,27 +101,27 @@ int main(int argc, const char * argv[]) {
 Scene* requestScene(int sceneNb) {
     switch (sceneNb) {
         case 0:
-            return new ExampleScene();
+            return new Scene00();
         case 1:
-            return new SimpleDemoScene();
+            return new Scene01();
         case 2:
-            return new ExampleScene();
+            return new Scene02();
         case 3:
-            return new SimpleDemoScene();
+            return new Scene03();
         case 4:
-            return new ExampleScene();
+            return new Scene00();
         case 5:
-            return new SimpleDemoScene();
+            return new Scene01();
         case 6:
-            return new ExampleScene();
+            return new Scene02();
         case 7:
-            return new SimpleDemoScene();
+            return new Scene03();
         case 8:
-            return new ExampleScene();
+            return new Scene00();
         case 9:
-            return new SimpleDemoScene();
+            return new Scene01();
             
         default:
-            return new ExampleScene();
+            return new Scene00();
     }
 }

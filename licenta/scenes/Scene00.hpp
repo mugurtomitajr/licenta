@@ -3,8 +3,8 @@
 //  practice
 //
 
-#ifndef ExampleScene_hpp
-#define ExampleScene_hpp
+#ifndef Scene00_hpp
+#define Scene00_hpp
 
 #include <cstdio>
 
@@ -15,10 +15,10 @@
 #include "../instances/generation/GeneratedBoardManager.hpp"
 #include "../cameras/FollowingCamera.hpp"
 
-class ExampleScene : public Scene {
+class Scene00 : public Scene {
 public:
-    ExampleScene();
-    ~ExampleScene();
+    Scene00();
+    ~Scene00();
     
     void Start();
     void Update(double dt, const glm::vec2 &p_deltaMouse, bool *p_keyPressedArray);
@@ -43,4 +43,4 @@ private:
     void _clear();
 };
 
-#endif /* ExampleScene_hpp */
+#endif /* Scene00_hpp */

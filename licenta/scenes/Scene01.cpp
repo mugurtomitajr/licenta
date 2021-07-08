@@ -3,19 +3,19 @@
 //  practice
 //
 
-#include "SimpleDemoScene.hpp"
+#include "Scene01.hpp"
 
-SimpleDemoScene::SimpleDemoScene() : Scene() {}
-SimpleDemoScene::~SimpleDemoScene() { this -> _clear(); }
+Scene01::Scene01() : Scene() {}
+Scene01::~Scene01() { this -> _clear(); }
 
-void SimpleDemoScene::Start() {
+void Scene01::Start() {
     this -> _data.blueLight = this -> _sceneManager.GetPointLight("blue-light");
     this -> _data.redLight = this -> _sceneManager.GetPointLight("red-light");
     this -> _data.lightCircleRadians = 0.0f;
     Scene::Start();
 }
 
-void SimpleDemoScene::Update(double dt, const glm::vec2 &p_deltaMouse, bool *p_keyPressedArray) {
+void Scene01::Update(double dt, const glm::vec2 &p_deltaMouse, bool *p_keyPressedArray) {
     Scene::Update(dt, p_deltaMouse, p_keyPressedArray);
     
     SpotLight *flashLight = this -> _sceneManager.GetSpotLight("flash-light");
@@ -34,11 +34,11 @@ void SimpleDemoScene::Update(double dt, const glm::vec2 &p_deltaMouse, bool *p_k
     this -> _data.redLight -> Position(this -> _camera -> Position() + glm::vec3(0.0f, distance * sin(this -> _data.lightCircleRadians), distance * cos(this -> _data.lightCircleRadians)));
 }
 
-void SimpleDemoScene::Stop() {
+void Scene01::Stop() {
     
 }
 
-void SimpleDemoScene::_loadShaders() {
+void Scene01::_loadShaders() {
     this -> _assetManager.AddShader("ground", "resources/shaders/ground.vert", "resources/shaders/ground.frag");
     this -> _assetManager.GetShader("ground") -> BindDefaults(this -> _assetManager.GetLightingMaterial("dull"), this -> _assetManager.AddTexture("grass", "resources/textures/grass-repeating-2.jpg"));
     
@@ -46,11 +46,11 @@ void SimpleDemoScene::_loadShaders() {
     this -> _assetManager.GetShader("water") -> BindDefaults(this -> _assetManager.GetLightingMaterial("shiny"), this -> _assetManager.AddTexture("water", "resources/textures/water-1.jpeg"));
 }
 
-void SimpleDemoScene::_loadModels() {
+void Scene01::_loadModels() {
     Scene::_loadModels();
 }
 
-void SimpleDemoScene::_loadInstances() {
+void Scene01::_loadInstances() {
     GeneratedBoardManager *boardManager = new GeneratedBoardManager(nullptr, glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(1.0f, 1.0f, 1.0f));
     this -> _sceneManager.AddInstance("board-manager", "default", boardManager);
     boardManager -> Position(glm::vec3(0.0f, -2.0f, 0.0f));
@@ -58,12 +58,12 @@ void SimpleDemoScene::_loadInstances() {
     this -> _data.boardManager = boardManager;
 }
 
-void SimpleDemoScene::_loadCamera(GLfloat p_verticalFov, GLfloat p_displayRatio) {
+void Scene01::_loadCamera(GLfloat p_verticalFov, GLfloat p_displayRatio) {
     this -> _camera = new ControllableCamera(p_verticalFov, p_displayRatio, glm::vec3(0.0f, 40.0f, 10.0f), glm::vec3(0.0f, 1.0f, 0.0f), 90.0f, 0.0f);
     this -> _data.boardManager -> CameraObserver(this -> _camera);
 }
 
-void SimpleDemoScene::_loadLights() {
+void Scene01::_loadLights() {
     this -> _sceneManager.SetDirectionalLight(glm::vec3(0.0f, 0.0f, 1.0f), glm::vec3(1.0f, 1.0f, 1.0f), 0.60f, 0.6f, 0.6f);
     this -> _sceneManager.AddPointLight("blue-light", glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.1f, 0.2f, 0.3f), glm::vec3(0.1f, 0.1f, 1.0f), 1.0f, 0.4f, 1.0f);
     this -> _sceneManager.AddPointLight("red-light", glm::vec3(2.0f, 2.0f, -2.0f), glm::vec3(0.1f, 0.2f, 0.3f), glm::vec3(1.0f, 0.1f, 0.2f), 1.0f, 0.4f, 1.0f);
@@ -71,4 +71,4 @@ void SimpleDemoScene::_loadLights() {
 }
 
 
-void SimpleDemoScene::_clear() {}
+void Scene01::_clear() {}

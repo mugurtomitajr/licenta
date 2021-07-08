@@ -2,8 +2,6 @@
 //  PerlinNoise2D.cpp
 //  licenta
 //
-//  Created by Mugur Tomita Jr. on 04/07/2021.
-//
 
 #include "PerlinNoise2D.hpp"
 

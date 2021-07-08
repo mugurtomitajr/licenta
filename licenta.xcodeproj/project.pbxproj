@@ -37,12 +37,12 @@
 		B71BC5B5268F32D900978E28 /* constants.hpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC5AE268F32D900978E28 /* constants.hpp */; };
 		B71BC5BF268F339200978E28 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC5BD268F339200978E28 /* Shader.cpp */; };
 		B71BC5C0268F339200978E28 /* Shader.hpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC5BE268F339200978E28 /* Shader.hpp */; };
-		B71BC5D1268F33D300978E28 /* ExampleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC5CB268F33D300978E28 /* ExampleScene.cpp */; };
+		B71BC5D1268F33D300978E28 /* Scene00.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC5CB268F33D300978E28 /* Scene00.cpp */; };
 		B71BC5D2268F33D300978E28 /* Scene.hpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC5CC268F33D300978E28 /* Scene.hpp */; };
-		B71BC5D3268F33D300978E28 /* SimpleDemoScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC5CD268F33D300978E28 /* SimpleDemoScene.cpp */; };
+		B71BC5D3268F33D300978E28 /* Scene01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC5CD268F33D300978E28 /* Scene01.cpp */; };
 		B71BC5D4268F33D300978E28 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC5CE268F33D300978E28 /* Scene.cpp */; };
-		B71BC5D5268F33D300978E28 /* SimpleDemoScene.hpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC5CF268F33D300978E28 /* SimpleDemoScene.hpp */; };
-		B71BC5D6268F33D300978E28 /* ExampleScene.hpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC5D0268F33D300978E28 /* ExampleScene.hpp */; };
+		B71BC5D5268F33D300978E28 /* Scene01.hpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC5CF268F33D300978E28 /* Scene01.hpp */; };
+		B71BC5D6268F33D300978E28 /* Scene00.hpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC5D0268F33D300978E28 /* Scene00.hpp */; };
 		B71BC651268F344A00978E28 /* Model.hpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC64B268F344A00978E28 /* Model.hpp */; };
 		B71BC652268F344A00978E28 /* GeneratedTileModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC64C268F344A00978E28 /* GeneratedTileModel.cpp */; };
 		B71BC653268F344A00978E28 /* GeneratedTileModel.hpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC64D268F344A00978E28 /* GeneratedTileModel.hpp */; };
@@ -78,6 +78,9 @@
 		B71BC69D268F355B00978E28 /* Skybox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC695268F355A00978E28 /* Skybox.cpp */; };
 		B71BC69E268F355B00978E28 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC696268F355A00978E28 /* Camera.cpp */; };
 		B71BC69F268F355B00978E28 /* Skybox.hpp in Sources */ = {isa = PBXBuildFile; fileRef = B71BC697268F355A00978E28 /* Skybox.hpp */; };
+		B76B8D7B2696F2AC000F796B /* Scene02.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B76B8D792696F2AC000F796B /* Scene02.cpp */; };
+		B76B8D7D2696F4BD000F796B /* Scene02.hpp in Sources */ = {isa = PBXBuildFile; fileRef = B76B8D7A2696F2AC000F796B /* Scene02.hpp */; };
+		B76B8D812696F6C8000F796B /* Scene03.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B76B8D7F2696F6C8000F796B /* Scene03.cpp */; };
 		B786B15526960274009A41B8 /* PerlinNoise2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B786B15326960274009A41B8 /* PerlinNoise2D.cpp */; };
 		B786B15626960274009A41B8 /* PerlinNoise2D.hpp in Sources */ = {isa = PBXBuildFile; fileRef = B786B15426960274009A41B8 /* PerlinNoise2D.hpp */; };
 /* End PBXBuildFile section */
@@ -126,12 +129,12 @@
 		B71BC5AE268F32D900978E28 /* constants.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = constants.hpp; path = support/constants.hpp; sourceTree = "<group>"; };
 		B71BC5BD268F339200978E28 /* Shader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Shader.cpp; path = shaders/Shader.cpp; sourceTree = "<group>"; };
 		B71BC5BE268F339200978E28 /* Shader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Shader.hpp; path = shaders/Shader.hpp; sourceTree = "<group>"; };
-		B71BC5CB268F33D300978E28 /* ExampleScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ExampleScene.cpp; path = scenes/ExampleScene.cpp; sourceTree = "<group>"; };
+		B71BC5CB268F33D300978E28 /* Scene00.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Scene00.cpp; path = scenes/Scene00.cpp; sourceTree = "<group>"; };
 		B71BC5CC268F33D300978E28 /* Scene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Scene.hpp; path = scenes/Scene.hpp; sourceTree = "<group>"; };
-		B71BC5CD268F33D300978E28 /* SimpleDemoScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = SimpleDemoScene.cpp; path = scenes/SimpleDemoScene.cpp; sourceTree = "<group>"; };
+		B71BC5CD268F33D300978E28 /* Scene01.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Scene01.cpp; path = scenes/Scene01.cpp; sourceTree = "<group>"; };
 		B71BC5CE268F33D300978E28 /* Scene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Scene.cpp; path = scenes/Scene.cpp; sourceTree = "<group>"; };
-		B71BC5CF268F33D300978E28 /* SimpleDemoScene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = SimpleDemoScene.hpp; path = scenes/SimpleDemoScene.hpp; sourceTree = "<group>"; };
-		B71BC5D0268F33D300978E28 /* ExampleScene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = ExampleScene.hpp; path = scenes/ExampleScene.hpp; sourceTree = "<group>"; };
+		B71BC5CF268F33D300978E28 /* Scene01.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Scene01.hpp; path = scenes/Scene01.hpp; sourceTree = "<group>"; };
+		B71BC5D0268F33D300978E28 /* Scene00.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Scene00.hpp; path = scenes/Scene00.hpp; sourceTree = "<group>"; };
 		B71BC5DB268F340F00978E28 /* plain-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plain-black.png"; sourceTree = "<group>"; };
 		B71BC5DE268F340F00978E28 /* nice-gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nice-gradient.png"; sourceTree = "<group>"; };
 		B71BC5DF268F340F00978E28 /* water-1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "water-1.jpeg"; sourceTree = "<group>"; };
@@ -254,6 +257,10 @@
 		B71BC6AC268F3E3400978E28 /* default.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = default.vert; sourceTree = "<group>"; };
 		B71BC6AD268F3E3400978E28 /* ground.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ground.frag; sourceTree = "<group>"; };
 		B71BC6AE268F3E3400978E28 /* water.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = water.frag; sourceTree = "<group>"; };
+		B76B8D792696F2AC000F796B /* Scene02.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Scene02.cpp; path = scenes/Scene02.cpp; sourceTree = "<group>"; };
+		B76B8D7A2696F2AC000F796B /* Scene02.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Scene02.hpp; path = scenes/Scene02.hpp; sourceTree = "<group>"; };
+		B76B8D7F2696F6C8000F796B /* Scene03.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Scene03.cpp; path = scenes/Scene03.cpp; sourceTree = "<group>"; };
+		B76B8D802696F6C8000F796B /* Scene03.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Scene03.hpp; path = scenes/Scene03.hpp; sourceTree = "<group>"; };
 		B786B15326960274009A41B8 /* PerlinNoise2D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PerlinNoise2D.cpp; path = support/PerlinNoise2D.cpp; sourceTree = "<group>"; };
 		B786B15426960274009A41B8 /* PerlinNoise2D.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = PerlinNoise2D.hpp; path = support/PerlinNoise2D.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -362,12 +369,16 @@
 		B71BC5CA268F33B100978E28 /* scenes */ = {
 			isa = PBXGroup;
 			children = (
-				B71BC5CB268F33D300978E28 /* ExampleScene.cpp */,
-				B71BC5D0268F33D300978E28 /* ExampleScene.hpp */,
 				B71BC5CE268F33D300978E28 /* Scene.cpp */,
 				B71BC5CC268F33D300978E28 /* Scene.hpp */,
-				B71BC5CD268F33D300978E28 /* SimpleDemoScene.cpp */,
-				B71BC5CF268F33D300978E28 /* SimpleDemoScene.hpp */,
+				B71BC5CB268F33D300978E28 /* Scene00.cpp */,
+				B71BC5D0268F33D300978E28 /* Scene00.hpp */,
+				B71BC5CD268F33D300978E28 /* Scene01.cpp */,
+				B71BC5CF268F33D300978E28 /* Scene01.hpp */,
+				B76B8D792696F2AC000F796B /* Scene02.cpp */,
+				B76B8D7A2696F2AC000F796B /* Scene02.hpp */,
+				B76B8D7F2696F6C8000F796B /* Scene03.cpp */,
+				B76B8D802696F6C8000F796B /* Scene03.hpp */,
 			);
 			name = scenes;
 			sourceTree = "<group>";
@@ -672,6 +683,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B76B8D7D2696F4BD000F796B /* Scene02.hpp in Sources */,
 				B786B15526960274009A41B8 /* PerlinNoise2D.cpp in Sources */,
 				B786B15626960274009A41B8 /* PerlinNoise2D.hpp in Sources */,
 				B71BC698268F355A00978E28 /* FollowingCamera.hpp in Sources */,
@@ -692,6 +704,7 @@
 				B71BC67A268F34F000978E28 /* FollowingDrone.cpp in Sources */,
 				B71BC67B268F34F000978E28 /* ControllableDronePropeller.hpp in Sources */,
 				B71BC67C268F34F000978E28 /* ControllableDrone.cpp in Sources */,
+				B76B8D7B2696F2AC000F796B /* Scene02.cpp in Sources */,
 				B71BC67D268F34F000978E28 /* ControllableDrone.hpp in Sources */,
 				B71BC67E268F34F000978E28 /* ControllableDronePropeller.cpp in Sources */,
 				B71BC66E268F34A400978E28 /* stb_image.h in Sources */,
@@ -699,6 +712,7 @@
 				B71BC662268F347400978E28 /* PointLight.hpp in Sources */,
 				B71BC663268F347400978E28 /* DirectionalLight.hpp in Sources */,
 				B71BC664268F347400978E28 /* Light.cpp in Sources */,
+				B76B8D812696F6C8000F796B /* Scene03.cpp in Sources */,
 				B71BC665268F347400978E28 /* SpotLight.hpp in Sources */,
 				B71BC666268F347400978E28 /* DirectionalLight.cpp in Sources */,
 				B71BC667268F347400978E28 /* PointLight.cpp in Sources */,
@@ -709,12 +723,12 @@
 				B71BC654268F344A00978E28 /* LODModel.hpp in Sources */,
 				B71BC655268F344A00978E28 /* Model.cpp in Sources */,
 				B71BC656268F344A00978E28 /* LODModel.cpp in Sources */,
-				B71BC5D1268F33D300978E28 /* ExampleScene.cpp in Sources */,
+				B71BC5D1268F33D300978E28 /* Scene00.cpp in Sources */,
 				B71BC5D2268F33D300978E28 /* Scene.hpp in Sources */,
-				B71BC5D3268F33D300978E28 /* SimpleDemoScene.cpp in Sources */,
+				B71BC5D3268F33D300978E28 /* Scene01.cpp in Sources */,
 				B71BC5D4268F33D300978E28 /* Scene.cpp in Sources */,
-				B71BC5D5268F33D300978E28 /* SimpleDemoScene.hpp in Sources */,
-				B71BC5D6268F33D300978E28 /* ExampleScene.hpp in Sources */,
+				B71BC5D5268F33D300978E28 /* Scene01.hpp in Sources */,
+				B71BC5D6268F33D300978E28 /* Scene00.hpp in Sources */,
 				B71BC5BF268F339200978E28 /* Shader.cpp in Sources */,
 				B71BC5C0268F339200978E28 /* Shader.hpp in Sources */,
 				B71BC5AF268F32D900978E28 /* threedim.cpp in Sources */,
